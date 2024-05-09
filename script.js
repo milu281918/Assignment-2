@@ -32,6 +32,10 @@ function showTask(){
 listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+function submitAndRedirect() {
+    saveData(); 
+    window.location.href = "login.html"; 
+}
 
 function logout(){
     localStorage.removeItem("name");
