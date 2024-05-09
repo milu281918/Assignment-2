@@ -1,27 +1,3 @@
-function saveData(){
-    let name,email,password;
-    name=document.getElementById("name").value;
-    email=document.getElementById("email").value;
-    password=document.getElementById("password").value;
-    localStorage.setItem("name",name);
-    localStorage.setItem("email",email);
-    localStorage.setItem("password",password);
-    let user_records=new Array();
-    user_records= JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[]
-    if(user_records.some((v)=>{
-        return v.email==email
-    })){
-        alert("Duplicate");
-    }
-    else{
-        user_records.push({
-            "name":name,
-            "email":email,
-            "password":password,
-        })
-        localStorage.setItem("user",JSON.stringify(user_records));
-    }
-}
 const inputBox =document.getElementById("input-box");
 const listContainer =document.getElementById("list-container");
 function addTask(){
