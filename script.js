@@ -36,12 +36,9 @@ showTask();
 function logout(){
     localStorage.removeItem("name");
     localStorage.removeItem("email");
-    window.location.href="index.html";
+    window.location.href="login.html";
 }
-function Register(){
-    
-    window.location.href="register.html";
-}
+
 function sortList(){
     let list, i , switching, listitems, shouldSwitch;
     list = document.getElementById("list-container");
